@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegue a Creatina</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jogo.js"></script>
+</head>
+<body onresize="ajustaDimensaoJogo()" id="bodi">
+    <div class="painel">
+        <div class="vidas">
+            <div class="vidinha">
+                <img id="v1" src="img/Vida-Cheia.png" />
+            </div>
+            <div class="vidinha">
+                <img id="v2" src="img/Vida-Cheia.png" />
+            </div>
+            <div class="vidinha">
+                <img id="v3" src="img/Vida-Cheia.png" />
+            </div>
+        </div>
+
+        <div class="cronometro">
+            Tempo: <span id="time"></span>
+        </div>
+    </div>
+    <script>
+        document.getElementById('time').innerHTML = tempo
+
+        var criaCreatina = setInterval(function(){
+            posicaoRandomica()
+        }, criaCreatinaTempo)
+
+        var criacaoGalinha = setInterval(function(){
+            criarGalinha()
+        }, 2000)
+    </script>
+</body>
+</html>
